@@ -26,29 +26,33 @@
 }
 
 body {
-  width: 100%;
+  /* width: 100%;
   height: 100%;
   font-family: "Hanken Grotesk";
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  align-items: center;
+  align-items: center; */
+  background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;   
 }
 
 .container {
-  margin: 5rem;
-  display: inline-block;
-  width: 45vw;
-  height: 100%;
-  max-width: 1200px;
-  /* margin: 0 auto; */
-  /* display: flex;
-  justify-content: space-between; */
-  /* align-items: center; */
-  /* padding: 20px; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 5%;
-  /* display: flex; */
+   width: 600px;    
+    background-color: var(--white);
+    display: flex;   
+    border-radius: 24px; 
+    box-shadow: 0px 4px 14px 10px hsla(241, 100%, 89%, 0.3);
+    -webkit-box-shadow: 0px 4px 14px 10px hsla(241, 100%, 89%, 0.3);
+    -moz-box-shadow: 0px 4px 14px 10px hsla(241, 100%, 89%, 0.3);
 }
 
 .container1 {
@@ -57,6 +61,7 @@ body {
   /* align-items: center; */
   /* align-self: center; */
 height: 100%;
+
   /* align-self: center;
     justify-content: space-between; */
 }
@@ -66,7 +71,10 @@ height: 100%;
   justify-content: center; */
   /* align-items: center;
   align-self: center; */
-  height: 100%; 
+  display: flex;
+    flex-direction: column;
+    /* padding: 30px 0; */
+  
   /* margin: 5rem; */
 }
 
@@ -144,24 +152,27 @@ height: 100%;
 }
 
 #score {
-  color: var(--white);
-  font-size: 48px;
-  font-weight: 700;
+   font-size: 48px;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--white);
 }
 
 h3 {
-  color: var(--white);
-  font-size: 18px;
   font-weight: 500;
-  padding: 0.5rem;
+    font-size: 24px;
+    color: var(--white);
 }
 
 #percent {
-  margin-bottom: -3rem;
+  font-weight: 500;
+    font-size: 14px;
+    color: var(--light-lavender);
+    /* padding: 15px 48px; */
 }
 
 .card-r h2 {
-  display: flex;
+ display: flex;
   font-size: 14px;
   padding: 0;
   margin:0;
@@ -183,9 +194,10 @@ li {
 
 #sumlist {
   /* display: inline-block; */
-text-align: center;
-list-style-type: none;
-padding: 0;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+
 }
 
 #reaction {
@@ -304,12 +316,37 @@ margin-right:10px;
 margin-right:10px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+#sumlist li:nth-child(1){
+  background-color: hsla(0, 100%, 67%, 0.1);
+  border-radius: 6px;
+  padding: 12px;
 }
 
-.attribution a {
+#sumlist li:nth-child(2){
+  background-color: hsla(39, 100%, 56%, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+#sumlist li:nth-child(3){
+  background-color: hsla(166, 100%, 37%, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+#sumlist li:nth-child(4){
+  background-color: hsla(234, 85%, 45%, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+}
+.attribution{
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;        
+}
+
+.attribution a{
   color: hsl(228, 45%, 44%);
 }
 
@@ -329,8 +366,8 @@ button {
   padding:9px;
 }
 
-button:focus {
-  outline: orange 5px auto;
+button:hover{
+  background: linear-gradient(180deg, var(--lsblue), var(--lrblue));
 }
 
 @media only screen and (max-width: 650px) {    
@@ -342,7 +379,7 @@ button:focus {
       width: 100%;   
       border-radius: 0; 
   }
-  .card-r{
+  .container2{
       border-top-left-radius: 0;
       border-top-right-radius: 0;
   }
