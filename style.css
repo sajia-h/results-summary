@@ -333,16 +333,23 @@ button:focus {
   outline: orange 5px auto;
 }
 
-@media only screen and (max-width: 460px) {
-  /* For mobile phones: */
-  .menu,
-  .main,
-  .right {
-    width: 100%;
+@media only screen and (max-width: 650px) {    
+  body{        
+      height: auto;
+  }      
+  .container1{
+      flex-direction: column;
+      width: 100%;   
+      border-radius: 0; 
   }
-
-  .circle {
-    background-image: linear-gradient(var(--viblue), var(--persblue));
-    max-width: 5rem;
+  .card-r{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+  .attribution{
+      position: relative;
+      bottom: unset;
+      margin-top: 20px;
   }
 }
+
